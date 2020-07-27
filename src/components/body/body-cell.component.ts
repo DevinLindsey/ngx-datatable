@@ -367,8 +367,8 @@ export class DataTableBodyCellComponent implements DoCheck, OnDestroy {
    */
   onReturnKeyDown(event: KeyboardEvent): void {
     let target: HTMLElement = (<HTMLElement>event.target);
-    const clickTargets: NodeListOf<Element> = target.getElementsByClassName('click');
-    const dblClickTargets: NodeListOf<Element> = target.getElementsByClassName('dbl-click');
+    const clickTargets: HTMLCollectionOf<Element> = target.getElementsByClassName('click');
+    const dblClickTargets: HTMLCollectionOf<Element> = target.getElementsByClassName('dbl-click');
     const mouseEvent: MouseEvent = document.createEvent('MouseEvents');
 
     // See if we have any class designated click or double click targets
